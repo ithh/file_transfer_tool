@@ -1,0 +1,10 @@
+{
+	"op": 2,
+	"args": 
+		{
+			"uname": "hui",
+			"passwd": "asdfghjkl",
+			"phone": "10101110110",
+			"email": "hui@itmojun.com" 
+		}
+}
