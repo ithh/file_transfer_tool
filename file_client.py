@@ -76,27 +76,7 @@ def write_file(file_path, file_size, file_md5):
             print("成功接收文件 %s" % file_path)
         else:
             print("接收文件 %s 失败（MD5校验不通过）" % file_path)
-            
 
-# server_ip = input("服务器IP地址：")
-# server_port = int(input("服务器端口："))
-
-# 本机调试
-# server_ip = "127.0.0.1"
-server_ip = "192.168.9.168"
-server_port = 9999
-
-# while True:
-#     try:
-#         sock = socket.socket()
-#         sock.connect((server_ip, server_port))
-#     except:
-#         time.sleep(1)
-#     else:
-#         break
-
-sock = socket.socket()
-sock.connect((server_ip, server_port))
 
 def recv_dir():
     '''
@@ -138,6 +118,28 @@ def recv_dir():
 
         write_file(file_path, file_size, file_md5)
 
+
+            
+
+# server_ip = input("服务器IP地址：")
+# server_port = int(input("服务器端口："))
+
+# 本机调试
+# server_ip = "127.0.0.1"
+server_ip = "192.168.9.168"
+server_port = 9999
+
+# while True:
+#     try:
+#         sock = socket.socket()
+#         sock.connect((server_ip, server_port))
+#     except:
+#         time.sleep(1)
+#     else:
+#         break
+
+sock = socket.socket()
+sock.connect((server_ip, server_port))
 
 recv_dir()
 # register()
